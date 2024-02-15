@@ -3,14 +3,16 @@
 using namespace earthtwo;
 
 Citizen::Citizen(const string& name, int const age)
-	: m_name{name}, m_age{age}{}
-
+	: m_age{age}
+{
+	m_name = name;
+}
 
 // Member methods
 
 void Citizen::set_name(const string& name) noexcept
 {
-	m_name = name;
+	this->m_name = name;
 }
 
 void Citizen::set_age(int const age) noexcept

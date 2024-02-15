@@ -1,8 +1,8 @@
-#include <Continent.h>
+#include <Continent.hpp>
 
 int main()
 {
-	earthtwo::City gelenjik;
+	earthtwo::Country gelenjik;
 
 	for (auto&& i : gelenjik.get_citizens())
 	{

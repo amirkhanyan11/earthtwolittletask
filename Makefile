@@ -14,12 +14,13 @@ LIBFT = $(LIBFTPATH)*.o
 
 G++ = g++
 DEPFLAGS = -MP -MD
+DEBUG = -fsanitize=address
 CFLAGS = -std=c++17 $(foreach H,$(INCPATH),-I$(H))
 
 all : $(EXEC)
 
 $(EXEC) : $(MAIN) $(OBJS)
-	$(G++) $(CFLAGS) $(MAIN) $(OBJS) -o $@
+	$(G++) $(CFLAGS) $(DEBUG) $(MAIN) $(OBJS) -o $@
 
 $(OBJSPATH)%.o : $(SRCSPATH)%.cpp
 	$(G++) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
