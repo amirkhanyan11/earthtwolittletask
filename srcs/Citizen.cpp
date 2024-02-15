@@ -10,28 +10,10 @@ Citizen::Citizen(const string& name, int const age)
 
 // Member methods
 
-void Citizen::set_name(const string& name) noexcept
-{
-	this->m_name = name;
-}
-
 void Citizen::set_age(int const age) noexcept
 {
 	if (age > 14 && age < 100)
 		m_age = age;
-}
-
-const string& Citizen::get_name() const noexcept
-{
-	return (m_name);
-}
-
-string& Citizen::get_name() noexcept
-{
-	return (const_cast<string&>
-	(
-		static_cast<const Citizen*>(this)->get_name()
-	));
 }
 
 const int& Citizen::get_age() const noexcept
@@ -46,3 +28,21 @@ int& Citizen::get_age() noexcept
 		static_cast<const Citizen*>(this)->get_age()
 	));
 }
+
+// void Citizen::set_name(const string& name) noexcept
+// {
+// 	this->m_name = name;
+// }
+
+// const string& Citizen::get_name() const noexcept
+// {
+// 	return (m_name);
+// }
+
+// string& Citizen::get_name() noexcept
+// {
+// 	return (const_cast<string&>
+// 	(
+// 		static_cast<const Citizen*>(this)->get_name()
+// 	));
+// }

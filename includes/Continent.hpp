@@ -39,3 +39,30 @@ Continent::Continent(const Continent& other)
 // Member methods
 
 
+void Continent::add_country(const Country& country) noexcept
+{
+	m_countries.push_back(country);
+}
+
+void Continent::add_country(std::initializer_list<Country> country_list) noexcept
+{
+	for (auto& i : country_list)
+	{
+		this->add_country(i);
+	}
+}
+
+const vector<Country>& Continent::get_countries() const noexcept
+{
+	return (m_countries);
+}
+
+vector<Country>& Continent::get_countries() noexcept
+{
+	return (const_cast<vector<Country>&>
+	(
+		static_cast<const Continent*>(this)->get_countries()
+	));
+}
+
+

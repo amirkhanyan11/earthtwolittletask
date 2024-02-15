@@ -8,7 +8,7 @@ namespace earthtwo
 
 	using std::string;
 
-	class NamedEntity
+	class Name
 	{
 
 	protected:
@@ -17,9 +17,9 @@ namespace earthtwo
 
 	public:
 
-		virtual void set_name(const string&) noexcept = 0;
-		virtual string& get_name() noexcept = 0;
-		virtual const string& get_name() const noexcept = 0;
+		virtual void set_name(const string&) noexcept;
+		virtual string& get_name() noexcept;
+		virtual const string& get_name() const noexcept;
 	};
 
 

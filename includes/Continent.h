@@ -8,7 +8,7 @@ namespace earthtwo
 
 	using std::string, std::cout, std::cin;
 
-	class Continent : public NamedEntity
+	class Continent : public Name, public Daytime
 	{
 
 	// Member data
@@ -28,11 +28,13 @@ namespace earthtwo
 	public:
 
 
-	void set_name(const string&) noexcept override;
-	string& get_name() noexcept override;
-	const string& get_name() const noexcept override;
+	// void set_name(const string&) noexcept override;
+	// string& get_name() noexcept override;
+	// const string& get_name() const noexcept override;
+	// void set_time(e_Daytime) noexcept override;
+
 	void add_country(const Country&) noexcept;
-	void set_daytime(Daytime) noexcept;
+	void add_country(std::initializer_list<Country>) noexcept;
 	const vector<Country>& get_countries() const noexcept;
 	vector<Country>& get_countries() noexcept;
 

@@ -6,9 +6,8 @@ using namespace earthtwo;
 // Constructors
 
 Country::Country()
-
-	: m_daytime{Daytime::DAY}
 {
+	m_daytime = e_Daytime::DAY;
 	m_name = "some_country";
 	m_population.push_back(std::make_unique<Citizen>("Lendrush", 42));
 	m_population.push_back(std::make_unique<Citizen>("Julberto", 19));
@@ -16,9 +15,8 @@ Country::Country()
 }
 
 Country::Country(const Country& other)
-
-	: m_daytime{other.m_daytime}
 {
+	m_daytime = other.m_daytime;
 	m_name = other.m_name;
 	for (auto&& i : other.m_population)
 	{
@@ -28,13 +26,13 @@ Country::Country(const Country& other)
 
 Country::Country(Country&& other)
 
-	: m_population{std::move((other.m_population))},
-	  m_daytime{other.m_daytime}
+	: m_population{std::move((other.m_population))}
 {
+	m_daytime = other.m_daytime;
 	m_name = std::move(other.m_name);
 }
 
-Country::Country(const string& name, const Citizen& citizen, Daytime daytime)
+Country::Country(const string& name, const Citizen& citizen, e_Daytime daytime)
 {
 	m_population.push_back(std::make_unique<Citizen>(citizen));
 	m_daytime = daytime;

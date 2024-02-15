@@ -2,7 +2,7 @@
 #define CITIZEN_H
 
 #include <iostream>
-#include <Namedentity.h>
+#include <Name.h>
 
 namespace earthtwo
 {
@@ -10,7 +10,7 @@ namespace earthtwo
 	using std::string, std::cout, std::cin;
 
 
-	class Citizen : public NamedEntity
+	class Citizen : public Name
 	{
 
 	// Member data
@@ -28,10 +28,11 @@ namespace earthtwo
 	// Public interface
 	public:
 
-		void set_name(const string&) noexcept override;
+		// void set_name(const string&) noexcept override;
+		// string& get_name() noexcept override;
+		// const string& get_name() const noexcept override;
+
 		void set_age(int const) noexcept;
-		string& get_name() noexcept override;
-		const string& get_name() const noexcept override;
 		int& get_age() noexcept;
 		const int& get_age() const noexcept;
 	};

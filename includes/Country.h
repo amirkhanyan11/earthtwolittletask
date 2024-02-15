@@ -5,19 +5,14 @@
 #include <memory>
 #include <vector>
 #include <Citizen.h>
+#include <Daytime.h>
 
 namespace earthtwo
 {
 
-	enum class Daytime
-	{
-		DAY,
-		NIGHT
-	};
-
 	using std::string, std::vector, std::cout, std::cin;
 
-	class Country : public NamedEntity
+	class Country : public Name, public Daytime
 	{
 
 	private:
@@ -28,25 +23,26 @@ namespace earthtwo
 	private:
 
 		CitizenUptrVec m_population{};
-		Daytime m_daytime{};
 
 	// Constructors
 	public:
 
 		Country();
-		Country(const string&, const Citizen& citizen = Citizen(), Daytime daytime = Daytime::DAY);
+		Country(const string&, const Citizen& citizen = Citizen(), e_Daytime daytime = e_Daytime::DAY);
 		Country(std::initializer_list<Citizen>);
 		Country(const Country&);
 		Country(Country&&);
+		~Country();
 
 	// Public interface
 	public:
 
-		void set_name(const string&) noexcept override;
-		string& get_name() noexcept override;
-		const string& get_name() const noexcept override;
+		// void set_name(const string&) noexcept override;
+		// string& get_name() noexcept override;
+		// const string& get_name() const noexcept override;
+		// void set_time(e_Daytime const) noexcept override;
+
 		void add_citizen(const Citizen&) noexcept;
-		void set_time(Daytime const) noexcept;
 		const CitizenUptrVec& get_citizens() const noexcept;
 		CitizenUptrVec& get_citizens() noexcept;
 

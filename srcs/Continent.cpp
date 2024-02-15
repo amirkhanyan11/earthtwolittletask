@@ -1,21 +1,26 @@
-#include <Continent.h>
+// #include <Continent.h>
 
-using namespace earthtwo;
+// using namespace earthtwo;
 
-void Continent::set_name(const string& name) noexcept
-{
-	this->m_name = name;
-}
+// void Continent::set_name(const string& name) noexcept
+// {
+// 	this->m_name = name;
+// }
 
-const string& Continent::get_name() const noexcept
-{
-	return (m_name);
-}
+// const string& Continent::get_name() const noexcept
+// {
+// 	return (m_name);
+// }
 
-string& Continent::get_name() noexcept
-{
-	return (const_cast<string&>
-	(
-		static_cast<const Continent*>(this)->get_name()
-	));
-}
+// string& Continent::get_name() noexcept
+// {
+// 	return (const_cast<string&>
+// 	(
+// 		static_cast<const Continent*>(this)->get_name()
+// 	));
+// }
+
+// void Continent::set_time(e_Daytime) noexcept
+// {
+
+// }
