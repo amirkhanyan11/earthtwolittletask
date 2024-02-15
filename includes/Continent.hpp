@@ -66,3 +66,20 @@ vector<Country>& Continent::get_countries() noexcept
 }
 
 
+// Overloaded operators
+
+
+constexpr Continent& Continent::operator=(Continent&& rhv) noexcept
+{
+
+	if (this != &rhv)
+	{
+		m_countries = std::move(rhv.m_countries);
+		m_name = std::move(rhv.m_name);
+		m_daytime = rhv.m_daytime;
+	}
+
+	return (*this);
+}
+
+

@@ -38,6 +38,10 @@ namespace earthtwo
 	const vector<Country>& get_countries() const noexcept;
 	vector<Country>& get_countries() noexcept;
 
+	public:
+
+		constexpr Continent& operator=(Continent&&) noexcept;
+
 	};
 
 
