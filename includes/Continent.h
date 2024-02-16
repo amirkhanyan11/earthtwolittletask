@@ -15,6 +15,7 @@ namespace earthtwo
 	// Member data
 	private:
 
+		// Change to hashtable
 		vector<Country> m_countries{};
 
 	// Constructors
@@ -42,7 +43,7 @@ namespace earthtwo
 
 	public:
 
-		constexpr Continent& operator=(Continent&&) noexcept;
+		constexpr Continent& operator=(Continent&&)& noexcept;
 
 	};
 

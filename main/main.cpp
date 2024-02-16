@@ -6,12 +6,16 @@ using namespace earthtwo;
 int main()
 {
 	// earthtwo::Country gelenjik;
+	Country a{"qyalnoc"};
 
-	ofstream ofs("/Users/aamirkha/Desktop/earthtwo/report/dayCycleReport");
+	Country b = a;
 
-	f_Daycycle cycle{ofs};
+	cout << b.get_name() << endl;
+	// ofstream ofs("/Users/aamirkha/Desktop/earthtwo/report/dayCycleReport");
 
-	cycle(15);
+	// f_Daycycle cycle{ofs};
+
+	// cycle(15);
 
 	return 0;
 }

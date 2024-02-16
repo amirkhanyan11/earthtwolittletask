@@ -28,21 +28,3 @@ int& Citizen::get_age() noexcept
 		static_cast<const Citizen*>(this)->get_age()
 	));
 }
-
-// void Citizen::set_name(const string& name) noexcept
-// {
-// 	this->m_name = name;
-// }
-
-// const string& Citizen::get_name() const noexcept
-// {
-// 	return (m_name);
-// }
-
-// string& Citizen::get_name() noexcept
-// {
-// 	return (const_cast<string&>
-// 	(
-// 		static_cast<const Citizen*>(this)->get_name()
-// 	));
-// }

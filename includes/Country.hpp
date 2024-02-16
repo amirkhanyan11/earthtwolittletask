@@ -12,6 +12,7 @@ Country::Country()
 	m_population.push_back(std::make_unique<Citizen>("Lendrush", 42));
 	m_population.push_back(std::make_unique<Citizen>("Julberto", 19));
 	m_population.push_back(std::make_unique<Citizen>("Alexandro", 80));
+	m_population.push_back(std::make_unique<Citizen>("Edul", 21));
 }
 
 Country::Country(const Country& other)

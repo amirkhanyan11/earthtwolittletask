@@ -12,7 +12,6 @@ f_Daycycle::f_Daycycle(ofstream& file, e_Daytime time)
 
 ofstream& f_Daycycle::operator()(int count)
 {
-
 	while (count > 0)
 	{
 		m_dayCycleReport << "----------------------------\n";

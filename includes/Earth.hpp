@@ -33,13 +33,15 @@ void Earth::set_time(e_Daytime& daytime, ofstream& file) noexcept
 {
 	if (!file.is_open())
 	{
-		cout << "hhehehhe" << endl;
+		return ;
 	}
 	m_continents[e_Continents::Europe].set_time(daytime, file);
 	m_continents[e_Continents::Asia].set_time(daytime, file);
 	m_continents[e_Continents::Africa].set_time(daytime, file);
 	m_continents[e_Continents::Australia].set_time(daytime, file);
+
 	daytime = (daytime == e_Daytime::NIGHT) ? e_Daytime::DAY : e_Daytime::NIGHT;
+
 	m_continents[e_Continents::North_America].set_time(daytime, file);
 	m_continents[e_Continents::South_America].set_time(daytime, file);
 	m_continents[e_Continents::Antarctica].set_time(daytime, file);

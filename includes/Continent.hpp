@@ -69,7 +69,7 @@ vector<Country>& Continent::get_countries() noexcept
 // Overloaded operators
 
 
-constexpr Continent& Continent::operator=(Continent&& rhv) noexcept
+constexpr Continent& Continent::operator=(Continent&& rhv)& noexcept
 {
 
 	if (this != &rhv)
