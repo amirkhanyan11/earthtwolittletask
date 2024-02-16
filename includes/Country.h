@@ -5,7 +5,7 @@
 #include <memory>
 #include <vector>
 #include <Citizen.h>
-#include <Daytime.h>
+#include <Daytime.hpp>
 
 namespace earthtwo
 {
@@ -40,8 +40,7 @@ namespace earthtwo
 		// void set_name(const string&) noexcept override;
 		// string& get_name() noexcept override;
 		// const string& get_name() const noexcept override;
-		// void set_time(e_Daytime const) noexcept override;
-
+		//void set_time(e_Daytime&) noexcept override;
 		void add_citizen(const Citizen&) noexcept;
 		const CitizenUptrVec& get_citizens() const noexcept;
 		CitizenUptrVec& get_citizens() noexcept;

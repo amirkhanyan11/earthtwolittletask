@@ -2,11 +2,12 @@
 #define CONTINENT_H
 
 #include <Country.h>
+#include <fstream>
 
 namespace earthtwo
 {
 
-	using std::string, std::cout, std::cin;
+	using std::string, std::cout, std::cin, std::fstream, std::ostream;
 
 	class Continent : public Name, public Daytime
 	{
@@ -31,8 +32,9 @@ namespace earthtwo
 		// void set_name(const string&) noexcept override;
 		// string& get_name() noexcept override;
 		// const string& get_name() const noexcept override;
-		// void set_time(e_Daytime) noexcept override;
+		//void set_time(e_Daytime&) noexcept override;
 
+		virtual void set_time(e_Daytime& daytime, ostream& file = cout) noexcept;
 		void add_country(const Country&) noexcept;
 		void add_country(std::initializer_list<Country>) noexcept;
 		const vector<Country>& get_countries() const noexcept;

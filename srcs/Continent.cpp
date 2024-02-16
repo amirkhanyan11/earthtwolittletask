@@ -1,6 +1,20 @@
-// #include <Continent.h>
+#include <Continent.h>
 
-// using namespace earthtwo;
+using namespace earthtwo;
+
+
+void Continent::set_time(e_Daytime& daytime, ostream& file) noexcept
+{
+	switch(daytime)
+	{
+		case e_Daytime::NIGHT :
+			file << "Continent " << this->m_name << " is sleeping\n";
+			break;
+		default:
+			file << "Continent " << this->m_name << " is awake\n";
+	}
+}
+
 
 // void Continent::set_name(const string& name) noexcept
 // {

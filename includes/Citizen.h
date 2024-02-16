@@ -7,7 +7,7 @@
 namespace earthtwo
 {
 
-	using std::string, std::cout, std::cin;
+	using std::string, std::cout, std::cin, std::endl;
 
 
 	class Citizen : public Name

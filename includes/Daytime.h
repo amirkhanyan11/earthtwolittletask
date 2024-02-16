@@ -2,11 +2,12 @@
 #define DAYTIME_H
 
 #include <iostream>
+#include <fstream>
 
 namespace earthtwo
 {
 
-	using std::string;
+	using std::string, std::fstream, std::ofstream, std::cout;
 
 	enum class e_Daytime
 	{
@@ -21,10 +22,13 @@ namespace earthtwo
 
 		e_Daytime m_daytime{};
 
+	public:
+
+		virtual ~Daytime() = default;
 
 	public:
 
-		virtual void set_time(e_Daytime const) noexcept;
+		virtual void set_time(e_Daytime& daytime, ofstream& file) noexcept;
 
 	};
 

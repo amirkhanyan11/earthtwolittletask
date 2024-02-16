@@ -4,9 +4,9 @@ using namespace earthtwo;
 
 Country::~Country() = default;
 
-// void Country::set_time(e_Daytime const daytime) noexcept
+// void Country::set_time(e_Daytime&) noexcept
 // {
-// 	m_daytime = daytime;
+// 	cout << "Country " << this->m_name << " is sleeping\n";
 // }
 
 // void Country::set_name(const string& name) noexcept

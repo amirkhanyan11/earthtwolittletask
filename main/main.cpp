@@ -1,20 +1,17 @@
-#include <Earth.hpp>
+#include <Daycycle.hpp>
+
+using namespace std;
+using namespace earthtwo;
 
 int main()
 {
 	// earthtwo::Country gelenjik;
 
-	auto& arr = Earth::get_instance().get_continents();
+	ofstream ofs("/Users/aamirkha/Desktop/earthtwo/report/dayCycleReport");
 
-	for (auto& i : arr)
-	{
-		std::cout << i.get_name() << std::endl;
-	}
+	f_Daycycle cycle{ofs};
 
-	// for (auto&& i : gelenjik.get_citizens())
-	// {
-	// 	std::cout << i->get_name() << std::endl;
-	// }
-	// std::cout << "hello world!" << std::endl;
+	cycle(15);
+
 	return 0;
 }

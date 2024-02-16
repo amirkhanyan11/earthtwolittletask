@@ -2,19 +2,30 @@
 #define EARTH_H
 
 #include <Continent.hpp>
-#include <array>
+#include <unordered_map>
 
 namespace earthtwo
 {
+
+	enum class e_Continents
+	{
+		Asia,
+		Africa,
+		North_America,
+		South_America,
+		Antarctica,
+		Europe,
+		Australia
+	};
 
 	class Earth : public Daytime
 	{
 
 	private:
 
-		using ContinentArr = std::array<Continent, 7>;
+		using ContinentMap = std::unordered_map<e_Continents, Continent>;
 
-		ContinentArr m_continents{};
+		ContinentMap m_continents{};
 
 	private:
 
@@ -32,8 +43,11 @@ namespace earthtwo
 
 	public:
 
-		const ContinentArr& get_continents() const noexcept;
-		ContinentArr& get_continents() noexcept;
+		//void set_time(e_Daytime&) noexcept override;
+
+		void set_time(e_Daytime& daytime, ofstream& file) noexcept override;
+		const ContinentMap& get_continents() const noexcept;
+		ContinentMap& get_continents() noexcept;
 
 	};
 
